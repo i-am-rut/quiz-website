@@ -16,7 +16,7 @@ const StartPage = ({ onStartQuiz }) => {
     useEffect(() => {
         const fetchTopics = async () => {
             try {
-                const quizRef = ref(db, 'quizzes')
+                const quizRef = ref(db, 'quizzes/-O9unMjPvdGYV05MCQOp')
                 const snapshot = await get(quizRef)
 
                 if(snapshot.exists()) {
@@ -34,7 +34,8 @@ const StartPage = ({ onStartQuiz }) => {
         fetchTopics()
     },[])
 
-    const filteredQuestions = availableQuestions.filter((item) => item.category === topic && item.difficulty === difficulty)
+    const filteredQuestions = availableQuestions.filter((item) => decode(item.category) === topic && item.difficulty === difficulty)
+
 
     const maxQuesNum = Array.from(filteredQuestions, (_, index) => index + 1)
 
@@ -47,7 +48,6 @@ const StartPage = ({ onStartQuiz }) => {
         }
     };
 
-    localStorage.setItem("userName", userName)
 
     return (
         <div className="start-page-container">
@@ -60,7 +60,7 @@ const StartPage = ({ onStartQuiz }) => {
                 id="userName-input"
                 className="input-userName"
                 value={userName}
-                placeholder={localStorage.getItem("userName")}
+                placeholder="Name"
                 onChange={(e) => setUserName(e.target.value)}
             />
 

@@ -18,12 +18,12 @@ const Quiz = ({ quizConfig, onStartQuiz }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const quizRef = ref(db, 'quizzes')
+                const quizRef = ref(db, 'quizzes/-O9unMjPvdGYV05MCQOp')
                 const snapshot = await get(quizRef)
 
                 if(snapshot.exists()) {
                     const data = snapshot.val()
-                    const quizData = data.filter(item => item.category === quizConfig.topic && item.difficulty === quizConfig.difficulty)
+                    const quizData = data.filter(item => decode(item.category) === quizConfig.topic && item.difficulty === quizConfig.difficulty)
                     const idLessData = quizData.sort(() => Math.random() -0.5).slice(0, quizConfig.numQuestions)
                     const configData = idLessData.map((item, index) => ({
                         ...item,
@@ -76,15 +76,18 @@ const Quiz = ({ quizConfig, onStartQuiz }) => {
             <div className="navbar">
                 <h1 className="website-title" onClick={handleTitleClick}>Quizzer</h1>
                 <div className="quiz-config">
-                    <p className="user-name">Username : {quizConfig.userName}</p>
-                    <p className="quiz-topic">Topic : {decode(quizConfig.topic)}</p>
-                    <p className="quiz-difficulty">Difficulty :  {quizConfig.difficulty}</p>
+                    <p className="user-name"><span>Username :</span> {quizConfig.userName}</p>
+                    <p className="quiz-topic"><span>Topic :</span> {decode(quizConfig.topic)}</p>
+                    <p className="quiz-difficulty"><span>Difficulty :</span>  {quizConfig.difficulty}</p>
                 </div>
             </div>
             <div className="quiz-container">
-                {!isSubmitted? 
-                    <p className="wish-text">All the best !</p> :
-                    <p className="score-text">{`Your score is ${score}/${quizData.length}`}</p>}
+                <div className="wish-score-container">
+                    {!isSubmitted? 
+                        <p className="wish-text">All the best !</p> :
+                        <p className="score-text">{`Your score is ${score}/${quizData.length}`}</p>
+                    }
+                </div>
                 { isSubmitted? (
                     paginatedQuestions.map((question) => (
                         <QuestionSubmitted 

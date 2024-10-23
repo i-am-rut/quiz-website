@@ -15,13 +15,11 @@
     align-items: center;
     background-color: #7581c3;
     padding: 20px;
-    padding-top: 12px;
     height: 100px;
 }
 
 .website-title {
-    padding: 6px 30px;
-    padding-bottom: 10px;
+    padding: 10px 30px;
     margin: 0;
     border-radius: 20px;
     border: 2px solid lightblue;
@@ -38,6 +36,10 @@
     border-radius: 10px;
     border: 2px solid lightblue;
     background-color: #293264;
+}
+
+.quiz-config > p > span {
+    text-decoration: underline;
 }
 
 .user-name{
@@ -90,31 +92,57 @@
 
 
 .wish-text, .score-text {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Balsamiq Sans", sans-serif;
+    margin: 0;
+}
+.wish-score-container {
+    display: flex;
+    justify-content: center;
     margin-bottom: 0;
     background-color: #293264;
     border-radius: 20px;
     color: white;
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 290px;
+    padding: 10px;
     font-weight: bold;
     letter-spacing: 1px;
-    font-family: "Balsamiq Sans", sans-serif;
 }
 
-.score-text {
-    padding-left: 260px;
-}
 
 .score-text-bottom {
     font-size: 20px;
     font-weight: bold;
     font-family: "Balsamiq Sans", sans-serif;
-    margin-right: 50px;
     padding: 10px 20px;
     background-color: #d9f1f9;
     border: none;
     border-radius: 16px;
 }
 
+@media (max-width: 465px) {
+    
+    .navbar {
+        height: 60px;
+        padding: 16px;
+    }
+
+    .website-title {
+        font-size: 20PX;
+    }
+
+    .quiz-config {
+        padding: 5px;
+    }
+
+    .quiz-config > p > span {
+        text-decoration: underline;
+    }
+
+    .user-name,
+    .quiz-topic,
+    .quiz-difficulty {
+        font-size: 10px;
+    }
+}
