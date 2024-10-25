@@ -3,12 +3,12 @@
   "name": "Quizzer Web",
   "icons": [
     {
-      "src": "../src/images/quiz-logo.ico",
+      "src": "quiz-logo.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "../src/images/splash-screen-logo.png",
+      "src": "splash-screen-logo.png",
       "type": "image/png",
       "sizes": "192x192"
     }
