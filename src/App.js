@@ -25,7 +25,7 @@ function App() {
       <footer>
         <p>©2024 Quizzer Web. All rights reserved.</p>
         <p>Made with ❤️ for curious minds. 
-          ( <a href="https://github.com/i-am-rut/quiz-website" target='_blank'>Creator</a> )
+          ( <a href="https://github.com/i-am-rut/quiz-website" target='_blank' rel="noopener noreferrer">Creator</a> )
         </p>
       </footer>
     </div>
