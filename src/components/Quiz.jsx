@@ -61,7 +61,7 @@ const Quiz = ({ quizConfig, onStartQuiz }) => {
         setCurrentPage(0)
     }
     const handleTitleClick = () => {
-        onStartQuiz(0)
+        onStartQuiz(null)
     }
 
     const handleOnStartNewQuiz = () => {

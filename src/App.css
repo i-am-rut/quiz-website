@@ -9,3 +9,20 @@ body {
   height: 89vh;
   font-family: "Balsamiq Sans", sans-serif;
 }
+
+
+footer {
+  background-color: #293241;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+footer p {
+  margin: 5px 0;
+}

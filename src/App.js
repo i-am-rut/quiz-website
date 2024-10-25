@@ -11,6 +11,7 @@ function App() {
   const startQuiz = (config) => {
     setQuizConfig(config)
   }
+  document.getElementById('year').textContent = new Date().getFullYear();
 
   return (
     <div className="App">
@@ -22,6 +23,10 @@ function App() {
           /> :
           <StartPage onStartQuiz={startQuiz} />
       }
+      <footer>
+        <p>© <span id="year"></span> Quizzer Web. All rights reserved.</p>
+        <p>Made with ❤️ for curious minds.</p>
+      </footer>
     </div>
   );
 }
