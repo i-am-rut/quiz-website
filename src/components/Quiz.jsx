@@ -72,7 +72,7 @@ const Quiz = ({ quizConfig, onStartQuiz }) => {
     
 
     return (
-        <div>
+        <div className="trial-quiz-container">
             <div className="navbar">
                 <h1 className="website-title" onClick={handleTitleClick}>Quizzer</h1>
                 <div className="quiz-config">
