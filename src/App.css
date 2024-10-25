@@ -23,6 +23,12 @@ footer {
   left: 0;
 }
 
+footer a {
+  color: #94D7A2;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
 footer p {
   margin: 5px 0;
 }
