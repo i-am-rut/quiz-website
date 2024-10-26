@@ -1,12 +1,7 @@
-.quiz-container {
-    font-family: 'Arial', sans-serif;
-    max-width: 700px;
-    margin: 0 auto;
-    margin-top: 3rem;
-    padding: 20px;
-    background-color: #f7f7fa;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+.trial-quiz-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 }
 
 .navbar {
@@ -16,6 +11,21 @@
     background-color: #7581c3;
     padding: 20px;
     height: 100px;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-family: "Balsamiq Sans", sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 20px;
+    background-color: #f7f7fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .website-title {
